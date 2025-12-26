@@ -1,4 +1,4 @@
-# SDL-builder
+# FAudio-builder
 This repository uses [Github Actions](https://github.com/PizzaGameKit/FAudio-builder/actions) to self-build Ethan Lee's [FAudio](https://github.com/FNA-XNA/FAudio) upon triggering a workflow.
 
 _This work is unofficial_. If you are new to **FAudio**, please refer to [the official distribution](https://github.com/FNA-XNA/FAudio/releases).
