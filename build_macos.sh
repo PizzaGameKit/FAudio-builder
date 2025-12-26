@@ -24,14 +24,14 @@ echo "Generate SDL"
 
 rm -r -f $sdlBuild
 
-cmake -S $sdlPath -B $sdlBuild > "$logFolder/SDL.gen.log"
+cmake -S $sdlPath -B $sdlBuild -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" > "$logFolder/SDL.gen.log"
 
 echo -e "\tDone"
 
 # Build SDL
 echo "Build SDL"
 
-cmake --build $sdlBuild --target all -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" > "$logFolder/SDL.bin.log"
+cmake --build $sdlBuild --target all > "$logFolder/SDL.bin.log"
 
 echo -e "\tDone"
 
