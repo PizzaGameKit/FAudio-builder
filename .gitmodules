@@ -1,0 +1,6 @@
+[submodule "FAudio"]
+	path = FAudio
+	url = https://github.com/PizzaGameKit/FAudio.git
+[submodule "SDL"]
+	path = SDL
+	url = https://github.com/PizzaGameKit/SDL.git
