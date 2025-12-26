@@ -24,7 +24,7 @@ echo "Generate SDL"
 
 rm -r -f $sdlBuild
 
-cmake -S $sdlPath -B $sdlBuild -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" > "$logFolder/SDL.gen.log"
+cmake -S $sdlPath -B $sdlBuild -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" > "$logFolder/SDL.gen.log"
 
 echo -e "\tDone"
 
@@ -40,7 +40,7 @@ echo "Generate FAudio"
 
 rm -r -f $faudioBuild
 
-cmake -S $faudioPath -B $faudioBuild -DSDL3_DIR="$sdlBuild" -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" > "$logFolder/FAudio.gen.log"
+cmake -S $faudioPath -B $faudioBuild -DSDL3_DIR="$sdlBuild" -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_DEPLOYMENT_TARGET="10.15" -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" > "$logFolder/FAudio.gen.log"
 
 echo -e "\tDone"
 

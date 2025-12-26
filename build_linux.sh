@@ -26,7 +26,7 @@ echo "Generate SDL"
 
 rm -r -f $sdlBuild
 
-cmake -S $sdlPath -B $sdlBuild > "$logFolder/SDL.gen.log"
+cmake -S $sdlPath -B $sdlBuild -DCMAKE_BUILD_TYPE=Release > "$logFolder/SDL.gen.log"
 
 echo -e "\tDone"
 
@@ -42,7 +42,7 @@ echo "Generate FAudio"
 
 rm -r -f $faudioBuild
 
-cmake -S $faudioPath -B $faudioBuild -DSDL3_DIR="$sdlBuild" > "$logFolder/FAudio.gen.log"
+cmake -S $faudioPath -B $faudioBuild -DSDL3_DIR="$sdlBuild" -DCMAKE_BUILD_TYPE=Release > "$logFolder/FAudio.gen.log"
 
 echo -e "\tDone"
 
